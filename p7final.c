@@ -33,12 +33,16 @@ Fraction add_fractions(Fraction f1, Fraction f2)
   sum.den=sum.den/g;
   return sum;
 }
+void output(Fraction f1, Fraction f2, Fraction sum)
+{
+  printf("The sum of %d/%d + %d/%d is %d/%d\n",f1.num,f1.den,f2.num,f2.den,sum.num,sum.den);
+}
 int main()
 {
   Fraction f1,f2,sum;
   f1=input_fraction();
   f2=input_fraction();
   sum=add_fractions(f1,f2);
-  printf("The fraction is %d/%d\n",sum.num,sum.den);
+  output(f1,f2,sum);
   return 0;
-}
+  }
